@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+:root {
+  --green: #44ce6f;
+  --green-bg: #cdf1d8;
+  --purple: #c679e3;
+  --purple-bg: #edc3fc;
+  --orange: #eb6b3d;
+  --orange-bg: #eb6b3d4d;
+  --white: white;
+  --black: black;
+  --gray: #666666;
+  --blue:#3c86cb;
+  --blue-text:#103371;
+  --yellow:#FCB900;
+  --blue-btn:#3c86cb
+  --footer-bg:#f5f5f7;
+  --icon-bg:#F8F7F0;
+  --header-subtext:#878680;
+  --header-text:#002756;
+  --header-text1:#96B501;
+  --green:#4BAF47;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Aesthet';
+  src: url('/fonts/Aesthet-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aesthet';
+  src: url('/fonts/Aesthet-Regular2.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aesthet';
+  src: url('/fonts/Aesthet-Regular3.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aesthet';
+  src: url('/fonts/zAesthet-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/QGYvz_MVcBeNP4NJuktqQ4E.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/QGYvz_MVcBeNP4NJtEtq.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.title-family{
+  font-family: "Aesthet", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.navSubItems {
+  width: 250px !important;
+  display: none !important;
+  position: absolute;
+  padding: 15px 25px;
+  align-items: start;
+  flex-direction: column;
+  top: 50px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, .05);
+  background: var(--white);
+  border-top: 4px solid var(--green);
+  transition: all .3s ease-in-out;
+  border-radius: 4px;
+}
+
+.navItems:hover .navSubItems {
+  display: flex !important;
+  animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+      transform: translateY(10px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+.mainImage{
+
+}
+
+.animated-button {
+  background-size: 0 100%, auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all .4s ease-out;
+  box-shadow: 0 13px 27px 0 #c679e340;
+}
+
+.animated-button:hover {
+  background-size: 100% 100%, auto;
+  transform: translateY(-10px);
+  box-shadow: 3px 3px 10px #44ce6f40;
+}
+.dot-container {
+  width: 20px; /* Width of the dot container */
+  height: 20px; /* Adjust height for a more circular appearance */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; 
+  border: 1px solid gray; /* Gray border for both active and non-active states */
+  margin: 0 5px; /* Spacing between dots */
+}
+
+.dot {
+  width: 5px; /* Width of the inner dot */
+  height: 5px; /* Height of the inner dot */
+  border-radius: 50%; /* Make it circular */
+  background-color: gray; /* Default color for non-active dot (inner) */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.dot.active {
+  background-color: #04000B; /* Color for active dot (inner) */
+}
+
+.dot-container.active {
+  border: 1px solid #04000B; /* Black border for active state */
+}
