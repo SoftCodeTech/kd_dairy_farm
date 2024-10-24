@@ -1,113 +1,52 @@
 'use client'
-import Image from 'next/image'
-import React from 'react'
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import ContactForm from '@/components/ContactForm';
-import { useFormik } from "formik";
-import * as Yup from "yup";
-
-const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Name is required"),
-    email: Yup.string().email().required("Email is required"),
-    contactNumber: Yup.string().matches(/^[0-9]\d{9}$/, "Contact Number must be 10 digits").required("Contact Number is required"),
-    subject: Yup.string().required("Subject is required"),
-    message: Yup.string().required("Message is required"),
-});
+import Banner from '@/components/Banner';
+import ContactUs from '@/components/ContactUs';
+import CallIcon from '@mui/icons-material/Call';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import Link from 'next/link';
 
 const Page = () => {
-    const formik = useFormik({
-        initialValues: {
-            name: "",
-            email: "",
-            contactNumber: "",
-            subject: "",
-            message: ""
-        },
-        onSubmit: async (values, { resetForm }) => {
-            console.log(values);
-            resetForm();  // Optionally reset form after submission
-        },
-        validationSchema: validationSchema,
-        validateOnChange: true,
-    })
-
     return (
-        <>
-            <div className="relative w-screen h-[500px] gradient-overlay mb-10">
-                <Image src="/images/contactus.jpg" alt="logo" width={1500} height={200} className="w-[100%] h-[100%] object-cover flex justify-center mainImage" />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0" style={{
-                    backgroundColor: "transparent",
-                    backgroundImage: "linear-gradient(90deg, #273a97 0%, #2A2B3F00 75%)"
-                }}></div>
-                <div className="absolute bottom-0" >
-                    <Image src="/images/about-us-overlay.png" alt="logo" width={1500} height={200} className="w-[100%] h-[100%] object-cover flex justify-center mainImage" />
+        <div>
+            <Banner route="/contact-us" name="Contact Us" breadcrumb="Contact Us" image="/images/contact-us-banner.png" />
+            <div className='mainContainer pt-16 lg:pt-24 pb-24 flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-10 xl:space-x-16'>
+                <div className='w-full lg:w-[50%]'>
+                    <div className='bg-[--icon-bg] p-10 space-y-5'>
+                        <h1 className='title-family font-semibold text-2xl sm:text-3xl lg:text-4xl text-[--green-text]'>Contact us</h1>
+                        <div className='flex items-center space-x-5'>
+                            <div className='w-[50px] h-[50px] flex justify-center items-center p-2 rounded-full bg-[--white]'>
+                                <CallIcon className='text-[--yellow]' />
+                            </div>
+                            <h1 className='text-lg font-semibold'>+ 91 90999 74229</h1>
+                        </div>
+                        <div className='flex items-center space-x-5'>
+                            <div className='w-[50px] h-[50px] flex justify-center items-center p-2 rounded-full bg-[--white]'>
+                                <EmailOutlinedIcon className='text-[--yellow]' />
+                            </div>
+                            <h1 className='text-lg font-semibold'>info@kdfarms.com</h1>
+                        </div>
+                        <div className='flex items-center space-x-5'>
+                            <div className='w-[50px] h-[50px] flex justify-center items-center p-2 rounded-full bg-[--white]'>
+                                <LocationOnOutlinedIcon className='text-[--yellow]' />
+                            </div>
+                            <Link href={"https://maps.app.goo.gl/vYMPsiCpanjY3TBY6"} target='_blank' className='text-lg font-semibold'>KD Farms, Surat, Gujarat, India</Link>
+                        </div>
+                    </div>
                 </div>
-                <div className="absolute w-[24%] h-full top-0 left-20 flex justify-center items-center">
-                    <div>
-                        <p className="text-[20px] font-bold text-[--yellow] mx-auto italic" style={{
-                            fontFamily: "Courgette,cursive"
-                        }}>Get In Touch</p>
-                        <p className="text-[40px] font-bold text-[--white]">
-                            Contact Us
-                        </p>
-                        <p className=' text-[--white] text-xl font-medium'>Start the conversation to established good relationship and business.</p>
+                <div className='w-full lg:w-[50%] space-y-8'>
+                    <div className='space-y-4'>
+                        <h1 className='title-family font-semibold text-2xl sm:text-3xl lg:text-4xl text-[--blue-text]'>Get in Touch</h1>
+                        <p className='text-[--gray] text-lg font-medium'>We’re here to answer all your quesƟons! Whether you’re looking for more informaƟon about our products, want to book a consultaƟon, or just want to learn more about our farm, don’t hesitate to reach out.</p>
+                    </div>
+                    <div className='space-y-4'>
+                        <h1 className='title-family font-semibold text-2xl sm:text-3xl lg:text-4xl text-[--blue-text]'>Farm Visits</h1>
+                        <p className='text-[--gray] text-lg font-medium'>Want to see KD Farms in acƟon? Book a farm visit today! We offer guided tours where you can see our animals, learn about our organic farming methods, and even try some of our fresh products.</p>
                     </div>
                 </div>
             </div>
-
-            {/* about us */}
-            <div className='my-20 grid grid-cols-2 px-10'>
-
-                <div className='relative shrink-0'>
-                    <p className="text-[20px] font-bold text-[--yellow]  italic" style={{
-                        fontFamily: "Courgette,cursive"
-                    }}>GET IN TOUCH </p>
-                    <p className="text-[--blue-text] font-semibold text-[40px] my-3" style={{ lineHeight: "1.2em" }}>Seamless Communication, Global Impact.</p>
-                    <div className='mt-6'>
-                        <div className='flex gap-5 mb-2'>
-                            <div className='bg-[--blue] rounded-full h-[50px] w-[50px] flex justify-center items-center text-white transition-all ease-in-out duration-500' >
-                                <LocationOnIcon />
-                            </div>
-                            <div className=''>
-                                <p className='text-[--blue-text] font-semibold text-xl '>Head Office</p>
-                                <p className='text-[--gray]  font-medium my-1'>KD Farms, Surat, Gujarat, India</p>
-                            </div>
-                        </div>
-                        <div className='flex gap-5 mb-2'>
-                            <div className='bg-[--blue] rounded-full h-[50px] w-[50px] flex justify-center items-center text-white transition-all ease-in-out duration-500' >
-                                <EmailIcon />
-                            </div>
-                            <div className=''>
-                                <p className='text-[--blue-text] font-semibold text-xl '>Email Us</p>
-                                <p className='text-[--gray]  font-medium my-1'>info@kdfarms.com</p>
-                            </div>
-                        </div>
-                        <div className='flex gap-5 mb-2'>
-                            <div className='bg-[--blue] rounded-full h-[50px] w-[50px] flex justify-center items-center text-white transition-all ease-in-out duration-500' >
-                                <LocalPhoneIcon />
-                            </div>
-                            <div className=''>
-                                <p className='text-[--blue-text] font-semibold text-xl '>Let's Talk</p>
-                                <p className='text-[--gray]  font-medium my-1'>+91-1234567890</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className='px-10 shrink-0 bg-[#273a97] p-12 rounded-2xl'>
-                    <ContactForm formik={formik} />
-                </div>
-
-            </div>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9580486412206!2d72.86103147503749!3d21.233512080467573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2652963ac9%3A0x7d9787a5b5c4275d!2sSilver%20Business%20Point!5e0!3m2!1sen!2sin!4v1717756413429!5m2!1sen!2sin" className="w-[100%] h-[70vh] my-10" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
-            {/* why choose us */}
-        </>
+            <ContactUs />
+        </div>
     )
 }
 

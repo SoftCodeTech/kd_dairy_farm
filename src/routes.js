@@ -27,7 +27,7 @@ export const Routes = [
     },
     {
         name: "Product",
-        path: "/product"
+        path: "/products"
     },
     {
         name: "Contact Us",
