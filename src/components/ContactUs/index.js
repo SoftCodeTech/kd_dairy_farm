@@ -29,7 +29,7 @@ const ContactUs = () => {
         <div className="mainContainer pt-14 lg:pt-20 pb-28 overflow-x-hidden">
             <div className="bg-[--icon-bg] flex flex-col lg:flex-row items-start justify-between w-full h-full" >
                 <div className="w-full lg:w-[50%] h-full">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.131624992297!2d72.85848267471545!3d21.067404486451235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be050d22a7762db%3A0x68504dbf2fe32558!2sKD%20Farms!5e0!3m2!1sen!2sin!4v1729793053099!5m2!1sen!2sin" className="w-full min-h-[450px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.131624992297!2d72.85848267471545!3d21.067404486451235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be050d22a7762db%3A0x68504dbf2fe32558!2sKD%20Farms!5e0!3m2!1sen!2sin!4v1729793053099!5m2!1sen!2sin" className="w-full min-h-[450px]" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div className="w-full lg:w-[50%] px-4 py-8 lg:p-12 space-y-7 relative">
                     <h1 className="title-family font-semibold text-2xl sm:text-3xl lg:text-4xl">Write a Message</h1>
