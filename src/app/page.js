@@ -30,7 +30,7 @@ export default function Home() {
             <p className="title-family">
               Fresh, Hygienic, and Nutritious Dairy Products Straight from Our Farms to Your Table
             </p>
-            <button className="xl:mt-10 mt-5 animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
+            <Link className="xl:mt-10 mt-5 animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
               Contact Us
             </Link>
           </div>
@@ -45,7 +45,7 @@ export default function Home() {
         <div className="flex-1 mt-5 lg:mt-0 lg:ml-10 xl:ml-0">
           <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold title-family text-[--green-text] "><span className="text-[--header-text]">About</span> KD Farms</p>
           <p className="mt-3 mb-10 text-lg font-medium text-[--gray] lg:w-4/5 xl:w-2/3 ">Welcome to KD Farms, where the lush pastures of Gujarat meet the finest in dairy Produce. Every product we offer is a result of our dedication to delivering fresh, nutritious dairy from our farm to your table. With advanced technology and rigorous hygiene standards, we guarantee that each drop of milk, every block of paneer, and all our dairy products retain their natural goodness and flavor. Our commitment to quality ensures that you enjoy products that are produced and delivered within hours, preserving freshness at its peak.</p>
-          <button className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
+          <Link className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
             Learn More
           </Link>
         </div>
