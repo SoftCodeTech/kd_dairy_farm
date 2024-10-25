@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* <Fade cascade direction="up"> */}
-            <div className="py-7 w-[100%] border-t border-t-[rgba(255,255,255,0.3)] font-semibold text-[#A5A49A] flex lg:flex-row flex-col space-y-[10px] lg:space-y-0 justify-between items-center px-24 mx-auto">
+            <div className="py-4 lg:py-7 w-[100%] border-t border-t-[rgba(255,255,255,0.3)] font-semibold text-[#A5A49A] flex lg:flex-row flex-col space-y-[10px] lg:space-y-0 justify-between items-center lg:px-24 mx-auto">
                 <p className="  text-center text-sm ">© All Copyright {new Date().getFullYear()} by Kd FARMS </p>
                 <p className="flex items-center ">
                     <Link href={"/"} className="px-2 hover:underline">Terms of Use</Link>
