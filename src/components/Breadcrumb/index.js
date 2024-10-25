@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Breadcrumb = ({ route, breadcrumb }) => {
     return (
-        <Breadcrumbs aria-label="breadcrumb" className='text-[--white]'>
+        <Breadcrumbs aria-label="breadcrumb" className='!text-[--white]'>
             <Link underline="hover" href="/" className='text-sm lg:text-base font-medium tracking-wider text-[--white]'>
                 HOME
             </Link>
