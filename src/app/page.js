@@ -4,6 +4,7 @@ import Image from "next/image";
 import { key_offering } from '@/constants'
 import dynamic from 'next/dynamic';
 import Follows from "@/components/follows";
+import Link from "next/link";
 
 
 const Testonomials = dynamic(() => import('@/components/testonomials'), {
@@ -18,18 +19,12 @@ export default function Home() {
         <Image src="/images/banner.png" alt="logo" width={1500} height={200} className="w-[100%] lg:h-auto h-[700px]  object-cover bg-center flex justify-center " />
         {/* Gradient overlay */}
         <div className="w-full absolute top-28 left-1/2 transform -translate-x-1/2 flex justify-center items-center ">
-          <div className="text-[32px] font-bold text-[--header-text] text-center  ">
-            <p
-              className="text-center title-family"
-            >
-              Welcome to KD Farms:
-            </p>
-            <p className="title-family">
-              Where Tradition Meets Innovation in Organic Farming
-            </p>
-            <button className="mt-10 animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
+          <div className="text-[32px] font-bold text-[--header-text] text-center">
+            <p className="text-center title-family"> Welcome to KD Farms: </p>
+            <p className="title-family"> Where Tradition Meets Innovation in Organic Farming </p>
+            <Link href={"/contact-us"} className="!mt-24 animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -42,9 +37,9 @@ export default function Home() {
         <div className="flex-1 mt-5 lg:mt-0 lg:ml-10 xl:ml-0">
           <p className="text-[32px] font-bold title-family text-[--header-text1] "><span className="text-[--header-text]">About</span> KD Farms</p>
           <p className="mt-3 mb-10 text-lg font-medium text-[--gray] lg:w-4/5 xl:w-2/3 ">At KD Farms, we are passionate about transforming the future of dairy farming and breed development. Our vision is to lead India in producing high-quality, organically sourced milk while seƫng new benchmarks in caƩle breeding and animal care. With a commitment to sustainable pracƟces and cuƫng-edge technology, we are building a farm that prioriƟzes both the health of our animals and the nutriƟonal quality of our products.</p>
-          <button className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
+          <Link href={"/about-us"} className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -65,9 +60,9 @@ export default function Home() {
           </div>
           <div className="w-full flex justify-center py-10">
 
-            <button className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px]">
+            <Link href={"/services"} className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px]">
               Explore Our Services
-            </button>
+            </Link>
           </div>
 
           <Image src="/images/offering-bg.png" height={1500} width={1500} className="w-[300px] h-auto object-contain absolute top-0 right-0 hidden lg:block" />
@@ -89,7 +84,7 @@ export default function Home() {
       </div>
 
       {/* follow on instargram */}
-      <Follows/>
+      <Follows />
     </div>
 
   );
