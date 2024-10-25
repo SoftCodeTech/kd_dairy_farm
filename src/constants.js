@@ -198,60 +198,94 @@ export const FrequentlyData = [
 ]
 
 
-export const key_offering=[
+export const key_offering = [
     {
-      "image": "/images/consulatancy.png",
-      "title": "Consultancy Services",
-      "description": "KD Farms provides expert consultancy in breed development, acrofacial inseminator, and organic farming techniques.",
+        "image": "/images/consulatancy.png",
+        "title": "Consultancy Services",
+        "description": "KD Farms provides expert consultancy in breed development, acrofacial inseminator, and organic farming techniques.",
     },
     {
-      "image": "/images/breed-dev.png",
-      "title": "Breed Development",
-      "description": "We specialize in improving cattle breeds for higher milk production and disease resistance.",
+        "image": "/images/breed-dev.png",
+        "title": "Breed Development",
+        "description": "We specialize in improving cattle breeds for higher milk production and disease resistance.",
     },
     {
-      "image": "/images/dairy_products.png",
-      "title": "Organic Dairy Products",
-      "description": "Our milk and milk products are 100% organic, produced without the use of hormones or antibiotics.",
+        "image": "/images/dairy_products.png",
+        "title": "Organic Dairy Products",
+        "description": "Our milk and milk products are 100% organic, produced without the use of hormones or antibiotics.",
     }
-  ]
+]
 
-  
-  export const testonomials=[
+export const testonomials = [
     {
-      "image": "/images/person-1.jpeg",
-      "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
-      "name": "Matthew J. Wyman",
-      "designation": "Senior Consultant"
+        "image": "/images/person-1.jpeg",
+        "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
+        "name": "Matthew J. Wyman",
+        "designation": "Senior Consultant"
     },
     {
-      "image": "/images/person-1.jpeg",
-      "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
-      "name": "Matthew J. Wyman1",
-      "designation": "Senior Consultant"
+        "image": "/images/person-1.jpeg",
+        "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
+        "name": "Matthew J. Wyman1",
+        "designation": "Senior Consultant"
     },
     {
-      "image": "/images/person-1.jpeg",
-      "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
-      "name": "Matthew J. Wyman2",
-      "designation": "Senior Consultant"
+        "image": "/images/person-1.jpeg",
+        "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
+        "name": "Matthew J. Wyman2",
+        "designation": "Senior Consultant"
     },
-  ]
+]
 
-  export const follows=[
+export const follows = [
     {
-      "image": "/images/instagram-1.png",
+        "image": "/images/instagram-1.png",
     },
     {
-      "image": "/images/instagram-2.png",
+        "image": "/images/instagram-2.png",
     },
     {
-      "image": "/images/instagram-3.png",
+        "image": "/images/instagram-3.png",
     },
     {
-      "image": "/images/instagram-4.png",
+        "image": "/images/instagram-4.png",
     },
     {
-      "image": "/images/instagram-1.png",
+        "image": "/images/instagram-1.png",
     },
-  ]
+]
+
+export const FooterRoutes = {
+    ExploreData: [
+        {
+            name: "About Us",
+            route: "/about-us"
+        },
+        {
+            name: "Services",
+            route: "/services"
+        },
+        {
+            name: "Products",
+            route: "/products"
+        },
+        {
+            name: "Contact Us",
+            route: "/contact-us"
+        },
+    ],
+    ServicesData: [
+        {
+            name: "Breed Development",
+            route: "/services"
+        },
+        {
+            name: "Farm Management",
+            route: "/services"
+        },
+        {
+            name: "Organic Fertilizer & Composting",
+            route: "/services"
+        },
+    ]
+}

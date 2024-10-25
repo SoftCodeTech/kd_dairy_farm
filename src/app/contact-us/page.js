@@ -18,19 +18,19 @@ const Page = () => {
                             <div className='w-[50px] h-[50px] flex justify-center items-center p-2 rounded-full bg-[--white]'>
                                 <CallIcon className='text-[--yellow]' />
                             </div>
-                            <h1 className='text-lg font-semibold'>+ 91 90999 74229</h1>
+                            <Link href={"tel:+919099974229"} target="_blank" className='text-lg font-semibold hover:underline'>+ 91 90999 74229</Link>
                         </div>
                         <div className='flex items-center space-x-5'>
                             <div className='w-[50px] h-[50px] flex justify-center items-center p-2 rounded-full bg-[--white]'>
                                 <EmailOutlinedIcon className='text-[--yellow]' />
                             </div>
-                            <h1 className='text-lg font-semibold'>info@kdfarms.com</h1>
+                            <Link href="mailto:kdfarmsmedia@gmail.com" target="_blank" className='text-lg font-semibold hover:underline'>info@kdfarms.com</Link>
                         </div>
                         <div className='flex items-center space-x-5'>
                             <div className='w-[50px] h-[50px] flex justify-center items-center p-2 rounded-full bg-[--white]'>
                                 <LocationOnOutlinedIcon className='text-[--yellow]' />
                             </div>
-                            <Link href={"https://maps.app.goo.gl/vYMPsiCpanjY3TBY6"} target='_blank' className='text-lg font-semibold'>KD Farms, Surat, Gujarat, India</Link>
+                            <Link href={"https://maps.app.goo.gl/vYMPsiCpanjY3TBY6"} target='_blank' className='text-lg font-semibold hover:underline'>KD Farms, Surat, Gujarat, India</Link>
                         </div>
                     </div>
                 </div>

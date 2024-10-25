@@ -19,16 +19,15 @@ const Navbar = () => {
 
     useEffect(() => {
         if (toggle) {
-          document.body.style.overflow = "hidden"; // Disable scrolling
+            document.body.style.overflow = "hidden";
         } else {
-          document.body.style.overflow = "auto"; // Re-enable scrolling
+            document.body.style.overflow = "auto";
         }
-        // Clean up on component unmount or when toggle changes
         return () => {
-          document.body.style.overflow = "auto";
+            document.body.style.overflow = "auto";
         };
-      }, [toggle]);
-    
+    }, [toggle]);
+
 
     return (
         <div className='fixed top-0 left-0 z-10 w-full'>
@@ -51,24 +50,23 @@ const Navbar = () => {
                                 <img src="/images/phone.png" alt="phone" className='h-[24px] w-[24px] xl:h-[30px] xl:w-[30px]' />
                                 <div>
                                     <p className='text-[--header-subtext] text-xs font-medium'>Call anytime</p>
-                                    <p className='text-[--header-text] text-sm font-semibold'>+ 91 90999 74229</p>
+                                    <Link href={"tel:+919099974229"} target="_blank" className='text-[--header-text] text-sm font-semibold hover:underline'>+ 91 90999 74229</Link>
                                 </div>
                             </div>
                             <div className='flex items-center space-x-3 border-l border-[#E4E2D7] p-2 xl:px-4 lg:px-1'>
                                 <img src="/images/email.png" alt="phone" className='h-[24px] w-[24px] xl:h-[30px] xl:w-[30px]' />
                                 <div>
                                     <p className='text-[--header-subtext] text-xs font-medium'>Send email</p>
-                                    <p className='text-[--header-text] text-sm font-semibold'>kdfarmsmedia@gmail.com</p>
+                                    <Link href="mailto:kdfarmsmedia@gmail.com" target="_blank" className='text-[--header-text] text-sm font-semibold hover:underline'>kdfarmsmedia@gmail.com</Link>
                                 </div>
                             </div>
                             <div className='flex items-center space-x-3  border-l border-[#E4E2D7] p-2 xl:px-4 lg:px-1'>
                                 <img src="/images/location.png" alt="phone" className='h-[28px] w-[24px] xl:h-[35px] xl:w-[30px]' />
-                                <div>
+                                <Link href={"https://maps.app.goo.gl/nH4pntTrE1DZpWiP6"} target="_blank" className='hover:underline'>
                                     <p className='text-[--header-subtext] text-xs font-medium'>Pali Gam, Sachin</p>
                                     <p className='text-[--header-text] text-sm font-semibold'>Surat, Gujarat 394230</p>
-                                </div>
+                                </Link>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -96,15 +94,11 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navbar */}
-
-            <div
-                className={`${toggle && "bg-[#F6F6F1] lg:hidden fixed w-[100%] !h-[87.5%]"} z-10 fixed top-[12.5%] left-0 transition-all ease-in-out duration-500 px-5  ${toggle ? "translate-x-0" : "translate-x-[-100%]"
-                    }`}
-            >
-
+            <div className={`${toggle && "bg-[#F6F6F1] lg:hidden fixed w-[100%] !h-[87.5%]"} z-10 fixed top-[12.5%] left-0 transition-all ease-in-out duration-500 px-5  ${toggle ? "translate-x-0" : "translate-x-[-100%]"
+                }`} >
                 <div className="flex lg:flex-row flex-col items-center justify-center lg:space-x-10 space-y-[30px] lg:space-y-0 lg:mt-0 mt-10">
                     {Routes?.map((val, index) => (
-                        <Link href={val.path} key={index} className=""  onClick={() => setToggle(false)} >
+                        <Link href={val.path} key={index} className="" onClick={() => setToggle(false)} >
                             <li className={`flex list-none transition-all ease-in-out duration-500 text-[20px] font-medium  text-[--header-subtext] ${pathname === val.path && "text-[--header-text] font-extrabold"}`}><span>{val.name}</span> {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" />}</li>
                             {val?.child && (
                                 <div className={`navSubItems space-y-4`}>
@@ -129,33 +123,29 @@ const Navbar = () => {
                             <img src="/images/phone.png" alt="phone" className='h-[30px] w-[30px]' />
                             <div>
                                 <p className='text-[--header-subtext] text-xs font-medium'>Call anytime</p>
-                                <p className='text-[--header-text] text-sm font-semibold'>+ 91 90999 74229</p>
+                                <Link href={"tel:+919099974229"} target="_blank" className='text-[--header-text] text-sm font-semibold hover:undeline'>+ 91 90999 74229</Link>
                             </div>
                         </div>
                         <div className='flex items-center space-x-3  p-6 px-4'>
                             <img src="/images/email.png" alt="phone" className='h-[30px] w-[30px]' />
                             <div>
                                 <p className='text-[--header-subtext] text-xs font-medium'>Send email</p>
-                                <p className='text-[--header-text] text-sm font-semibold'>kdfarmsmedia@gmail.com</p>
+                                <Link href="mailto:kdfarmsmedia@gmail.com" target="_blank" className='text-[--header-text] text-sm font-semibold'>kdfarmsmedia@gmail.com</Link>
                             </div>
                         </div>
                         <div className='flex items-center space-x-3     px-4'>
                             <img src="/images/location.png" alt="phone" className='h-[35px] w-[24px]' />
-                            <div>
+                            <Link href={"https://maps.app.goo.gl/nH4pntTrE1DZpWiP6"} target="_blank">
                                 <p className='text-[--header-subtext] text-xs font-medium'>Pali Gam, Sachin</p>
                                 <p className='text-[--header-text] text-sm font-semibold'>Surat, Gujarat 394230</p>
-                            </div>
+                            </Link>
                         </div>
-
                     </div>
                 </div>
-
                 <div className='bg-[#878680] h-[1px] w-full my-10'></div>
-
                 <div className='flex justify-center items-center'>
                     <SocialMediaButtons isMobileView="true" />
                 </div>
-
             </div>
         </div>
     )
