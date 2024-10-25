@@ -1,14 +1,8 @@
 'use client'
-import Image from 'next/image';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { dairy_products as dairyProductData } from '@/constants'
 import Banner from '@/components/Banner';
+import Image from 'next/image';
 
 const Page = () => {
-
-    console.log('dairyProductData', dairyProductData)
     return (
         <div className=''>
             <Banner route="/services" name="Services" breadcrumb="Services" image="/images/service-banner.png" />
