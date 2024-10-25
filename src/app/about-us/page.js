@@ -254,7 +254,7 @@ const page = () => {
             <div className="mainContainer pt-20 lg:pt-28 pb-20 flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-24">
                 <div className="w-full lg:w-[50%] space-y-6">
                     <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-[--blue-text]"> Why <span className="text-[#96B501]">KD Farms?</span></h1>
-                    <p className="text-lg font-semibold text-[--gray]">At KD Farms, we believe in doing things differently. Here's what sets us apart:</p>
+                    <p className="text-lg font-semibold text-[--gray]">At KD Farms, we believe in doing things differently. Here&apos;s what sets us apart:</p>
                     <div className="space-y-4 !mb-10">
                         <ul className="space-y-3 list-disc">
                             <li className=" space-y-2">
