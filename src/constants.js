@@ -47,17 +47,17 @@ export const ProductsData = [
     {
         image: "/images/milk.png",
         name: "Milk",
-        details: "Fresh, creamy, and delivered straight from our farm to your table."
+        details: "Fresh and creamy, delivered straight from our farm to your home, packed with purity in every glass."
     },
     {
         image: "/images/ghee.png",
         name: "Ghee",
-        details: "Pure, golden, and full of flavor. Perfect for cooking and health benefits."
+        details: "Golden and flavorful, perfect for adding richness to your dishes."
     },
     {
         image: "/images/chass.png",
         name: "Chaas",
-        details: "Refreshing and cooling buttermilk, a perfect drink for hot days."
+        details: "A refreshing buttermilk drink, ideal for quenching thirst on hot days."
     },
     {
         image: "/images/paneer.png",
@@ -67,17 +67,17 @@ export const ProductsData = [
     {
         image: "/images/cheese.png",
         name: "Cheese",
-        details: "Rich and flavorful fresh cheese, made with the finest milk."
+        details: "Rich and flavorful, crafted from the finest milk, perfect for any meal."
     },
     {
         image: "/images/lassi.png",
         name: "Lassi",
-        details: "Delicious and nutritious, perfect for a refreshing break."
+        details: "A smooth and delicious treat, both nutritious and refreshing."
     },
     {
         image: "/images/curd.png",
         name: "Curd",
-        details: "Thick and creamy curd, full of probiotics for a healthy gut."
+        details: "Thick, creamy, and packed with probiotics for a healthy digestive system"
     },
     {
         image: "/images/yogurt.png",
@@ -87,7 +87,7 @@ export const ProductsData = [
     {
         image: "/images/shrikhand.png",
         name: "Shrikhand",
-        details: "Sweet and creamy, a traditional treat for special occasions."
+        details: "A sweet and creamy delight, perfect for special occasions."
     },
 ]
 
@@ -95,50 +95,51 @@ export const WhyChooseGreenData = [
     {
         image: "/images/why-choose-1.png",
         title: "01",
-        details: "Cows milked using advanced technology with proper testing."
+        details: "Advanced technology and rigorous testing ensure the highest standards."
     },
     {
         image: "/images/why-choose-2.png",
         title: "02",
-        details: "Milk chilled to 4°C, ensuring strict hygiene."
+        details: "Milk chilled to 4°C immediately to preserve freshness."
     },
-    {
-        image: "/images/why-choose-3.png",
-        title: "03",
-        details: "Poured into barrier-proof bottles for maximum freshness"
-    },
+//     {
+//         image: "/images/why-choose-3.png",
+//         title: "03",
+//         details: "Delivered from our farm to your table within hours for maximum taste and nutrients.
+// "
+//     },
     {
         image: "/images/why-choose-4.png",
         title: "04",
-        details: "Delivered from our farms to your table within hours."
+        details: "Delivered from our farm to your table within hours for maximum taste and nutrients."
     },
 ]
 
 export const WhyChooseRedData = [
     {
-        details: "Milk collected in unhygienic cans, risking contamination."
+        details: "Milk collected in unhygienic cans, risking contamination"
     },
     {
-        details: "Transported over long distances in high temperatures."
+        details: "Transported over long distances, losing freshness."
     },
     {
-        details: "Delays in chilling affect quality."
+        details: "Delays and reheating reduce nutritional value."
     },
     {
-        details: "Heated and cooled, impacting nutrition and flavor."
+        details: "Packaged in plastic, posing contamination risks."
     },
-    {
-        details: "Undergoes cream separation, quality testing, and processing."
-    },
-    {
-        details: "Long shelf times reduce freshness."
-    },
-    {
-        details: "Packaged in plastic containers, posing contamination risks."
-    },
-    {
-        details: "Further quality reduction when warmed at home."
-    },
+    // {
+    //     details: "Undergoes cream separation, quality testing, and processing."
+    // },
+    // {
+    //     details: "Long shelf times reduce freshness."
+    // },
+    // {
+    //     details: "Packaged in plastic containers, posing contamination risks."
+    // },
+    // {
+    //     details: "Further quality reduction when warmed at home."
+    // },
 ]
 
 export const HealthBenefitsData = [
@@ -202,17 +203,22 @@ export const key_offering=[
     {
       "image": "/images/consulatancy.png",
       "title": "Consultancy Services",
-      "description": "KD Farms provides expert consultancy in breed development, acrofacial inseminator, and organic farming techniques.",
+      "description": "Our state-of-the-art dairy farm is the heart of KD Farms. From milking to production, every step is closely monitored to ensure the highest standards of hygiene and quality. Our cows are fed homegrown, nutritious feed, and are treated with care to produce the finest milk and dairy products, which are delivered fresh to your doorstep.",
     },
     {
       "image": "/images/breed-dev.png",
       "title": "Breed Development",
-      "description": "We specialize in improving cattle breeds for higher milk production and disease resistance.",
+      "description": "We are committed to maintaining and developing superior cattle breeds. Through careful selection and breeding techniques, we focus on raising high-quality dairy cattle that yield the best milk. Our emphasis on breed development ensures that our cows are healthy, strong, and capable of consistently producing nutritious milk.",
     },
     {
       "image": "/images/dairy_products.png",
       "title": "Organic Dairy Products",
-      "description": "Our milk and milk products are 100% organic, produced without the use of hormones or antibiotics.",
+      "description": "At KD Farms, we believe in giving back to the land. We produce organic fertilizers and compost from farm waste, creating a sustainable cycle that nourishes our pastures and ensures that our crops are grown without harmful chemicals. This practice not only boosts farm productivity but also helps maintain soil health for future generations."
+    },
+    {
+      "image": "/images/breed-dev.png",
+      "title": "Farm Management",
+      "description": "Our comprehensive farm management practices integrate the latest technology and eco-friendly methods to optimize production while minimizing environmental impact. By overseeing every detail — from feed production to water conservation — we ensure that KD Farms runs smoothly and efficiently, producing top-quality dairy products while caring for our land and animals."
     }
   ]
 

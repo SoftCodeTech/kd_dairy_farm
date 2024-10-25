@@ -32,10 +32,10 @@ const Testonomials = () => {
     };
 
     return (
-        <div className="relative px-5 lg:px-0 bg-[#E9F1EE]  ">
-            <div className="lg:w-[80%] mx-auto">
+        <div className="relative  bg-[#E9F1EE]  ">
+            <div className="mainContainer lg:w-[80%] mx-auto">
                 <div className="py-10">
-                    <p className="text-[32px] font-bold title-family text-[--header-text] text-center">What people say?</p>
+                    <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold title-family text-[--header-text] text-center">What people say?</p>
                 </div>
                 <div className="slider-container pb-20 w-[90%] lg:w-2/3  mx-auto">
                     <Slider {...settings} afterChange={(index) => setCurrentSlide(index)}>

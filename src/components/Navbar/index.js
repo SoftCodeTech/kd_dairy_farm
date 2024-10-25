@@ -4,31 +4,40 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Routes } from "@/routes";
 import Image from "next/image";
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 import SocialMediaButtons from '../SocialMediaButtons';
+import { Popover } from '@mui/material';
 
 const Navbar = () => {
     const pathname = usePathname()
+    const router = useRouter()
     const [sideNavToggle, setSideNavToggle] = useState(false)
     const [drawerToggle, setDrawerToggle] = useState(false)
     const [openDropdown, setOpenDropdown] = useState(null)
     const [isNavbarBg, setIsNavbarBg] = useState(false)
     const [toggle, setToggle] = useState(false);
+    const [anchorElModal, setAnchorElModal] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState([])
 
+    const handlePopoverClose = () => setAnchorElModal(null);
+    const handlePopoverOpen = (event, category) => {
+        setAnchorElModal(event.currentTarget)
+        setSelectedCategory(category)
+    };
 
     useEffect(() => {
         if (toggle) {
-          document.body.style.overflow = "hidden"; // Disable scrolling
+            document.body.style.overflow = "hidden"; // Disable scrolling
         } else {
-          document.body.style.overflow = "auto"; // Re-enable scrolling
+            document.body.style.overflow = "auto"; // Re-enable scrolling
         }
         // Clean up on component unmount or when toggle changes
         return () => {
-          document.body.style.overflow = "auto";
+            document.body.style.overflow = "auto";
         };
-      }, [toggle]);
-    
+    }, [toggle]);
+
 
     return (
         <div className='fixed top-0 left-0 z-10 w-full'>
@@ -77,20 +86,18 @@ const Navbar = () => {
             <div className=' hidden lg:block w-full h-auto bg-transparent' style={{ backgroundImage: "url(/images/header-bg.png)", backgroundPosition: "center" }}>
                 <div className="flex items-center justify-center space-x-10">
                     {Routes?.map((val, index) => (
-                        <Link href={val.path} key={index} className=" relative py-4">
-                            <li className={`flex list-none transition-all ease-in-out duration-500  font-semibold text-[--header-subtext] ${pathname === val.path && "text-[--header-text]"}`}><span>{val.name}</span> {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" />}</li>
-                            {val?.child && (
-                                <div className={`navSubItems space-y-4`}>
-                                    {val?.child?.map((child, idx) => (
-                                        // <Link href={child.path} key={idx}>
-                                        <li key={idx} className="list-none text-[--blue-text] text-sm font-semibold hover:text-[--blue] transition-all ease-in-out duration-500">
-                                            {child.name}
-                                        </li>
-                                        // </Link>
-                                    ))}
-                                </div>
-                            )}
-                        </Link>
+                        <div>
+                            <li key={index} className={`relative cursor-pointer py-4 flex items-center list-none transition-all ease-in-out duration-500  font-semibold text-[--header-subtext] ${pathname === val.path && "text-[--header-text]"}`}
+                                onClick={(e) => {
+                                    if (val?.child) {
+                                        handlePopoverOpen(e, val.child)
+                                    } else {
+                                        router.push(val.path)
+                                    }
+                                }}><span>{val.name}</span>
+                                {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" className='lg:block hidden' />}
+                            </li>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -101,17 +108,21 @@ const Navbar = () => {
                 className={`${toggle && "bg-[#F6F6F1] lg:hidden fixed w-[100%] !h-[87.5%]"} z-10 fixed top-[12.5%] left-0 transition-all ease-in-out duration-500 px-5  ${toggle ? "translate-x-0" : "translate-x-[-100%]"
                     }`}
             >
-
                 <div className="flex lg:flex-row flex-col items-center justify-center lg:space-x-10 space-y-[30px] lg:space-y-0 lg:mt-0 mt-10">
                     {Routes?.map((val, index) => (
-                        <Link href={val.path} key={index} className=""  onClick={() => setToggle(false)} >
-                            <li className={`flex list-none transition-all ease-in-out duration-500 text-[20px] font-medium  text-[--header-subtext] ${pathname === val.path && "text-[--header-text] font-extrabold"}`}><span>{val.name}</span> {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" />}</li>
+                        <Link href={val.path} key={index} className="" onClick={() => setToggle(false)} >
+                            <li className={`flex list-none transition-all ease-in-out duration-500 text-[20px] font-medium  text-[--header-subtext] ${pathname === val.path && "text-[--header-text] font-extrabold"}`}><span>{val.name}</span> 
+                            {/* {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" />} */}
+                            </li>
                             {val?.child && (
                                 <div className={`navSubItems space-y-4`}>
                                     {val?.child?.map((child, idx) => (
                                         // <Link href={child.path} key={idx}>
-                                        <li key={idx} className="list-none text-[--blue-text] text-sm font-semibold hover:text-[--blue] transition-all ease-in-out duration-500">
-                                            {child.name}
+                                        <li key={idx} className="list-none text-[--blue-text] text-sm font-semibold hover:text-[--blue] transition-all ease-in-out duration-500" onClick={() => {
+                                            console.log('path', child.path)
+                                            router.push(child.path)
+                                        }}>
+                                            {child.name} 
                                         </li>
                                         // </Link>
                                     ))}
@@ -155,9 +166,34 @@ const Navbar = () => {
                 <div className='flex justify-center items-center'>
                     <SocialMediaButtons isMobileView="true" />
                 </div>
-
+                <Popover
+                    id="mouse-over-popover"
+                    className='lg:mt-[4px] xl:mt-[7px]'
+                    sx={{ bgcolor: "rgba(0, 0, 0, 0.1)" }}
+                    open={Boolean(anchorElModal)}
+                    anchorEl={anchorElModal}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                    }}
+                    transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'left',
+                    }}
+                    onClose={handlePopoverClose}
+                >
+                    <div className={`px-4 pt-3 w-[200px] border-t-4 border-[--yellow] rounded-md`}>
+                        {selectedCategory?.map((subCategory, idx) => (
+                            <div key={idx}>
+                                <Link key={idx} href={subCategory.path}>
+                                    <li className='list-none text-md font-semibold !mb-3 whitespace-nowrap truncate max-w-xs tracking-wide hover:tracking-wider hover:font-bold cursor-pointer transition-all ease-in-out duration-500 hover:text-[--primary-theme-color] w-max' onClick={() => handlePopoverClose()}>{subCategory.name}</li>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </Popover>
             </div>
-        </div>
+        </div >
     )
 }
 

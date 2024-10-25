@@ -30,7 +30,6 @@
   --green-text: #96B501;
   --green-background: #4baf471a;
   --red-background: #FFF6F7;
-
 }
 
 * {
@@ -208,4 +207,12 @@ body {
 
 .dot-container.active {
   border: 1px solid #04000B; /* Black border for active state */
+}
+
+.truncate-two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
