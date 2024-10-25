@@ -5,6 +5,7 @@ import Frequently from '@/components/Frequently';
 import HealthBenefits from '@/components/HealthBenefits';
 import Products from '@/components/Products';
 import Subscription from '@/components/Subscription';
+import Testonomials from '@/components/testonomials';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -17,6 +18,7 @@ const Page = () => {
             <WhyChooseUs />
             <HealthBenefits />
             <Frequently />
+            <Testonomials/>
             <ContactUs />
         </div>
     )

@@ -9,8 +9,8 @@ const WhyChooseUs = () => {
             <h1 className="title-family font-semibold text-2xl  md:text-3xl lg:text-5xl text-center text-[--blue-text]">Why Choose <span className="text-[--green-text]">KD Farms</span>?</h1>
             <h1 className="title-family font-semibold text-lg  md:text-xl lg:text-3xl text-center text-[--blue-text]"><span className="text-[--green-text]">KD Farms Milk</span> VS. Normal Pasteurized Milk</h1>
             <div className="!mt-20 xl:!mt-28 flex flex-col lg:flex-row items-center lg:space-x-4">
-                <div className="w-full lg:w-[50%]">
-                    <div className="rounded-[25px] relative border-2 border-[--green] bg-[--green-background] px-5 pt-12 pb-10 lg:transform lg:-rotate-2 xl:-rotate-3 -z-30">
+                <div className="w-full lg:w-[50%] ">
+                    <div className="rounded-[25px] relative border-2 border-[--green] bg-[--green-background] px-5 pt-12 pb-10 lg:transform lg:-rotate-2 xl:-rotate-3 -z-30 lg:h-[500px]">
                         <Image
                             src={"/images/why-choose-true.png"}
                             alt="why-choose-true"
@@ -38,8 +38,8 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full lg:w-[50%]">
-                    <div className="rounded-[25px] relative bg-[--red-background] px-5 pt-12 pb-10 lg:transform lg:rotate-3 xl:rotate-6 mt-20 lg:mt-24 xl:mt-28 -z-50">
+                <div className="w-full lg:w-[50%] ">
+                    <div className="rounded-[25px] lg:h-[500px] relative bg-[--red-background] px-5 pt-12 pb-10 lg:transform lg:rotate-3 xl:rotate-6 mt-20 lg:mt-24 xl:mt-28 -z-50">
                         <div className="w-[60px] h-[60px] absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FFDCE2] p-[9px] rounded-[25px]">
                             <Image
                                 src={"/images/why-choose-wrong.png"}

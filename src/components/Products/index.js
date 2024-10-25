@@ -54,7 +54,8 @@ const Products = () => {
     return (
         <div className="mt-28 pb-20 space-y-3 lg:space-y-5">
             <h1 className="title-family font-semibold text-2xl md:text-3xl lg:text-5xl text-center text-[--blue-text]">Our Dairy Products</h1>
-            <p className="text-sm lg:text-base text-center w-[70%] mx-auto text-[--gray]">We offer a variety of organic dairy products, all sourced from our grass-fed animals. Our cows are fed a diet free from hormones, anƟbioƟcs, and chemical addiƟves, ensuring that their milk is as pure as possible.</p>
+            <p className="text-sm lg:text-base text-center w-[70%] mx-auto text-[--gray]">From fresh milk to delicious paneer, KD Farms brings you the freshest, tastiest dairy products, directly from our farm to your kitchen.
+</p>
             <div className="w-full overflow-hidden !mt-20">
                 <Slider {...productsSliderSettings} ref={sliderRef} >
                     {ProductsData?.map((val, index) => (
