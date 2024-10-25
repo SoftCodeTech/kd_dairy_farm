@@ -1,13 +1,10 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
+import { testonomials } from '@/constants';
 import Image from 'next/image';
-import { testonomials } from '@/constants'
-
-
-
+import { useState } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const Testonomials = () => {
     const [currentSlide, setCurrentSlide] = useState(0);

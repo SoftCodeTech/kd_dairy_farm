@@ -1,13 +1,12 @@
 "use client"
-import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Routes } from "@/routes";
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import { Popover } from '@mui/material';
 import Image from "next/image";
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
 import SocialMediaButtons from '../SocialMediaButtons';
-import { Popover } from '@mui/material';
 
 const Navbar = () => {
     const pathname = usePathname()
@@ -84,8 +83,8 @@ const Navbar = () => {
             <div className=' hidden lg:block w-full h-auto bg-transparent' style={{ backgroundImage: "url(/images/header-bg.png)", backgroundPosition: "center" }}>
                 <div className="flex items-center justify-center space-x-10">
                     {Routes?.map((val, index) => (
-                        <div>
-                            <li key={index} className={`relative cursor-pointer py-4 flex items-center list-none transition-all ease-in-out duration-500  font-semibold text-[--header-subtext] ${pathname === val.path && "text-[--header-text]"}`}
+                        <div key={index}>
+                            <li  className={`relative cursor-pointer py-4 flex items-center list-none transition-all ease-in-out duration-500  font-semibold text-[--header-subtext] ${pathname === val.path && "text-[--header-text]"}`}
                                 onClick={(e) => {
                                     if (val?.child) {
                                         handlePopoverOpen(e, val.child)

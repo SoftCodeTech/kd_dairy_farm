@@ -1,7 +1,6 @@
 "use client"
 
 import { useFormik } from "formik";
-import Image from "next/image";
 import * as Yup from "yup";
 
 const validationSchema = Yup.object().shape({

@@ -1,5 +1,4 @@
 "use client";
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import Image from 'next/image';
 import Link from 'next/link';
 

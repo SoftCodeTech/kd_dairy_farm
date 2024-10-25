@@ -1,9 +1,9 @@
 "use client"
 
-import Image from "next/image";
-import SocialMediaButtons from "../SocialMediaButtons";
-import Link from "next/link";
 import { FooterRoutes } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
+import SocialMediaButtons from "../SocialMediaButtons";
 // import { Fade } from "react-awesome-reveal";
 
 const Footer = () => {
