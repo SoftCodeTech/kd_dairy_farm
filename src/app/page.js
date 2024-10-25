@@ -24,7 +24,7 @@ export default function Home() {
             >
               India’s One and Only Fully Integrated Dairy Farm:
             </p>
-            <p className="title-family">
+            <p className="title-family !mb-10">
               Fresh, Hygienic, and Nutritious Dairy Products Straight from Our Farms to Your Table
             </p>
             <Link href="/contact-us" className="xl:mt-10 mt-5 animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">

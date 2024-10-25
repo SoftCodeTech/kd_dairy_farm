@@ -25,16 +25,16 @@ const Navbar = () => {
         setSelectedCategory(category)
     };
 
-    useEffect(() => {
-        if (toggle) {
-            document.body.style.overflow = "hidden"; // Disable scrolling
-        } else {
-            document.body.style.overflow = "auto"; // Re-enable scrolling
-        }
-        return () => {
-            document.body.style.overflow = "auto";
-        };
-    }, [toggle]);
+    // useEffect(() => {
+    //     if (toggle) {
+    //         document.body.style.overflow = "hidden"; // Disable scrolling
+    //     } else {
+    //         document.body.style.overflow = "auto"; // Re-enable scrolling
+    //     }
+    //     return () => {
+    //         document.body.style.overflow = "auto";
+    //     };
+    // }, [toggle]);
 
 
     return (
@@ -84,7 +84,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-center space-x-10">
                     {Routes?.map((val, index) => (
                         <div key={index}>
-                            <li  className={`relative cursor-pointer py-4 flex items-center list-none transition-all ease-in-out duration-500  font-semibold text-[--header-subtext] ${pathname === val.path && "text-[--header-text]"}`}
+                            <li className={`relative cursor-pointer py-4 flex items-center list-none transition-all ease-in-out duration-500  font-semibold text-[--header-subtext] ${pathname === val.path && "text-[--header-text]"}`}
                                 onClick={(e) => {
                                     if (val?.child) {
                                         handlePopoverOpen(e, val.child)
@@ -100,15 +100,13 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navbar */}
-            <div
-                className={`${toggle && "bg-[#F6F6F1] lg:hidden fixed w-[100%] !h-[87.5%]"} z-10 fixed top-[12.5%] left-0 transition-all ease-in-out duration-500 px-5  ${toggle ? "translate-x-0" : "translate-x-[-100%]"
-                    }`}
+            <div className={`${toggle && "bg-[#F6F6F1] overflow-y-auto lg:hidden fixed w-[100%] h-[87.5%]"} z-10 fixed top-[12.5%] left-0 transition-all ease-in-out duration-500 px-5  ${toggle ? "translate-x-0" : "translate-x-[-100%]"}`}
             >
                 <div className="flex lg:flex-row flex-col items-center justify-center lg:space-x-10 space-y-[30px] lg:space-y-0 lg:mt-0 mt-10">
                     {Routes?.map((val, index) => (
                         <Link href={val.path} key={index} className="" onClick={() => setToggle(false)} >
-                            <li className={`flex list-none transition-all ease-in-out duration-500 text-[20px] font-medium  text-[--header-subtext] ${pathname === val.path && "text-[--header-text] font-extrabold"}`}><span>{val.name}</span> 
-                            {/* {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" />} */}
+                            <li className={`flex list-none transition-all ease-in-out duration-500 text-[20px] font-medium  text-[--header-subtext] ${pathname === val.path && "text-[--header-text] font-extrabold"}`}><span>{val.name}</span>
+                                {/* {val?.child && <KeyboardArrowDownOutlinedIcon fontSize="small" />} */}
                             </li>
                             {val?.child && (
                                 <div className={`navSubItems space-y-4`}>
@@ -118,7 +116,7 @@ const Navbar = () => {
                                             console.log('path', child.path)
                                             router.push(child.path)
                                         }}>
-                                            {child.name} 
+                                            {child.name}
                                         </li>
                                         // </Link>
                                     ))}
@@ -129,7 +127,6 @@ const Navbar = () => {
                 </div>
 
                 <div className='bg-[#878680] h-[1px] w-full my-10'></div>
-
                 <div className='flex justify-center items-center'>
                     <div className=' '>
                         <div className='flex items-center space-x-3  px-4'>
@@ -155,7 +152,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-[#878680] h-[1px] w-full my-10'></div>
+                <div className='bg-[#878680] h-[1px] w-full !my-10'></div>
                 <div className='flex justify-center items-center'>
                     <SocialMediaButtons isMobileView="true" />
                 </div>

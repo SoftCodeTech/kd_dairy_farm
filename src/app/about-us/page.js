@@ -255,7 +255,7 @@ const page = () => {
                     <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-[--blue-text]"> Why <span className="text-[#96B501]">KD Farms?</span></h1>
                     <p className="text-lg font-semibold text-[--gray]">At KD Farms, we believe in doing things differently. Here&apos;s what sets us apart:</p>
                     <div className="space-y-4 !mb-10">
-                        <ul className="space-y-3 list-disc">
+                        <ul className="space-y-3 md:list-disc" >
                             <li className=" space-y-2">
                                 <h1 className="text-[--black] font-semibold whitespace-nowrap">Automated Milking:</h1>
                                 <p className="text-[14px] font-medium text-[--gray]">Delivering dairy products that are collected, pasteurized, and delivered fresh to your doorstep within hours.</p>
