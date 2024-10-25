@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import Follows from "@/components/follows";
 import Products from "@/components/Products";
 import ContactUs from "@/components/ContactUs";
+import Link from "next/link";
 
 
 const Testonomials = dynamic(() => import('@/components/testonomials'), {
@@ -31,7 +32,7 @@ export default function Home() {
             </p>
             <button className="xl:mt-10 mt-5 animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -46,7 +47,7 @@ export default function Home() {
           <p className="mt-3 mb-10 text-lg font-medium text-[--gray] lg:w-4/5 xl:w-2/3 ">Welcome to KD Farms, where the lush pastures of Gujarat meet the finest in dairy Produce. Every product we offer is a result of our dedication to delivering fresh, nutritious dairy from our farm to your table. With advanced technology and rigorous hygiene standards, we guarantee that each drop of milk, every block of paneer, and all our dairy products retain their natural goodness and flavor. Our commitment to quality ensures that you enjoy products that are produced and delivered within hours, preserving freshness at its peak.</p>
           <button className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px] ">
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -70,9 +71,9 @@ export default function Home() {
           </div>
           <div className="w-full flex justify-center py-10">
 
-            <button className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px]">
+            <Link href={"/services"} className="animated-button bg-[--yellow] rounded-full border-none text-[--black] font-semibold text-[18px] px-[27px] py-[14px]">
               Explore Our Services
-            </button>
+            </Link>
           </div>
 
           <Image src="/images/offering-bg.png" height={1500} width={1500} className="w-[300px] h-auto object-contain absolute top-0 right-0 hidden lg:block" />
@@ -94,7 +95,6 @@ export default function Home() {
 
       {/* follow on instargram */}
       <Follows />
-
       <ContactUs />
     </div>
 

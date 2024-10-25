@@ -199,7 +199,7 @@ export const FrequentlyData = [
 ]
 
 
-export const key_offering=[
+export const key_offering = [
     {
       "image": "/images/consulatancy.png",
       "title": "Consultancy Services",
@@ -220,44 +220,78 @@ export const key_offering=[
       "title": "Farm Management",
       "description": "Our comprehensive farm management practices integrate the latest technology and eco-friendly methods to optimize production while minimizing environmental impact. By overseeing every detail — from feed production to water conservation — we ensure that KD Farms runs smoothly and efficiently, producing top-quality dairy products while caring for our land and animals."
     }
-  ]
+]
 
-  
-  export const testonomials=[
+export const testonomials = [
     {
-      "image": "/images/person-1.jpeg",
-      "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
-      "name": "Matthew J. Wyman",
-      "designation": "Senior Consultant"
+        "image": "/images/person-1.jpeg",
+        "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
+        "name": "Matthew J. Wyman",
+        "designation": "Senior Consultant"
     },
     {
-      "image": "/images/person-1.jpeg",
-      "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
-      "name": "Matthew J. Wyman1",
-      "designation": "Senior Consultant"
+        "image": "/images/person-1.jpeg",
+        "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
+        "name": "Matthew J. Wyman1",
+        "designation": "Senior Consultant"
     },
     {
-      "image": "/images/person-1.jpeg",
-      "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
-      "name": "Matthew J. Wyman2",
-      "designation": "Senior Consultant"
+        "image": "/images/person-1.jpeg",
+        "description": "“Greatest consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.”",
+        "name": "Matthew J. Wyman2",
+        "designation": "Senior Consultant"
     },
-  ]
+]
 
-  export const follows=[
+export const follows = [
     {
-      "image": "/images/instagram-1.png",
+        "image": "/images/instagram-1.png",
     },
     {
-      "image": "/images/instagram-2.png",
+        "image": "/images/instagram-2.png",
     },
     {
-      "image": "/images/instagram-3.png",
+        "image": "/images/instagram-3.png",
     },
     {
-      "image": "/images/instagram-4.png",
+        "image": "/images/instagram-4.png",
     },
     {
-      "image": "/images/instagram-1.png",
+        "image": "/images/instagram-1.png",
     },
-  ]
+]
+
+export const FooterRoutes = {
+    ExploreData: [
+        {
+            name: "About Us",
+            route: "/about-us"
+        },
+        {
+            name: "Services",
+            route: "/services"
+        },
+        {
+            name: "Products",
+            route: "/products"
+        },
+        {
+            name: "Contact Us",
+            route: "/contact-us"
+        },
+    ],
+    ServicesData: [
+        {
+            name: "Breed Development",
+            route: "/services"
+        },
+        {
+            name: "Farm Management",
+            route: "/services"
+        },
+        {
+            name: "Organic Fertilizer & Composting",
+            route: "/services"
+        },
+    ]
+}
