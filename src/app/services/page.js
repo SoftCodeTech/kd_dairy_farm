@@ -4,77 +4,74 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { dairy_products as dairyProductData } from '@/constants'
-
+import Banner from '@/components/Banner';
 
 const Page = () => {
 
     console.log('dairyProductData', dairyProductData)
     return (
-        <>
-            <div className="relative w-screen h-[500px] gradient-overlay mb-10">
-                <Image src="/images/contactus.jpg" alt="logo" width={1500} height={200} className="w-[100%] h-[100%] object-cover flex justify-center mainImage" />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0" style={{
-                    backgroundColor: "transparent",
-                    backgroundImage: "linear-gradient(90deg, #273a97 0%, #2A2B3F00 75%)"
-                }}></div>
-                <div className="absolute bottom-0" >
-                    <Image src="/images/about-us-overlay.png" alt="logo" width={1500} height={200} className="w-[100%] h-[100%] object-cover flex justify-center mainImage" />
-                </div>
-                <div className="absolute w-[24%] h-full top-0 left-20 flex justify-center items-center">
-                    <div>
-                        <p className="text-[20px] font-bold text-[--yellow] mx-auto italic" style={{
-                            fontFamily: "Courgette,cursive"
-                        }}>All Products</p>
-                        <p className="text-[40px] font-bold text-[--white]">
-                            Dairy Product
-                        </p>
-                        <p className=' text-[--white] text-xl font-medium'>Support local farmers and choose FreshMoo for your dairy needs.</p>
+        <div className=''>
+            <Banner route="/services" name="Services" breadcrumb="Services" image="/images/service-banner.png" />
+            <div className="md:py-28 py-20 relative  overflow-hidden ">
+                <div className="mainContainer lg:w-[80%] mx-auto">
+                    {/* Breed Development Section */}
+                    <div className="grid grid-cols-1 md:grid-cols-3  lg:gap-14 md:gap-6">
+                        <div className='col-span-1'>
+                            <div className=''>
+                                <Image src="/images/service-1.png" alt="Breed Development" height={500} width={500} className="w-full h-full object-cover " />
+                            </div>
+                        </div>
+                        <div className="col-span-2 ">
+                            <div className='md:mt-0 mt-5'>
+                                <p className='text-white flex justify-center items-center bg-[--green-text]  rounded-full title-family lg:text-xl font-semibold lg:w-[50px] lg:h-[50px]  w-[40px] h-[40px] mb-3'>01</p>
+                            </div>
+                            <h2 className="lg:text-[32px] md:text-[28px] text-2xl font-bold  title-family text-[--header-text] text-left">Breed Development</h2>
+                            <p className="font-medium mt-4 text-[--gray] md:text-normal text-sm">
+                                KD Farms is at the forefront of breed development, specializing in both natural and arƟficial inseminaƟon techniques to improve the geneƟc quality of caƩle. Our goal is to create caƩle that not only produce more milk but are also more resilient to diseases. We also provide consultancy services to other farm owners, helping them implement best pracƟces for improving milk yield and animal health. Whether it’s cows, buffaloes, or goats, our experƟse spans a variety of species, and we are equipped to offer arƟficial inseminaƟon doses and natural breeding processes.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Farm Management Section */}
+                    <div className="grid grid-cols-1 md:grid-cols-3  lg:gap-14 md:gap-6 py-16">
+                        <div className='col-span-1 md:order-2'>
+                            <div className=''>
+                                <Image src="/images/service-2.png" alt="Breed Development" height={500} width={500} className="w-full h-full " />
+                            </div>
+                        </div>
+                        <div className="col-span-2 md:order-1">
+                            <div className='md:mt-0 mt-5'>
+                                <p className='text-white flex justify-center items-center bg-[--green-text]  rounded-full title-family lg:text-xl font-semibold lg:w-[50px] lg:h-[50px]  w-[40px] h-[40px] mb-3'>02</p>
+                            </div>
+                            <h2 className="lg:text-[32px] md:text-[28px] text-2xl font-bold  title-family text-[--header-text] text-left">Farm Management</h2>
+                            <p className="font-medium mt-4 text-[--gray] md:text-normal text-sm">
+                                We believe that the well-being of our animals is paramount. Our farm management system includes everything from the automaƟc milking parlours to soŌware that tracks the health and producƟon data of each animal. This system ensures Ɵmely vaccinaƟons, feeding schedules, and health monitoring, leading to happier animals and beƩer milk producƟon. We even use our own customized animal profiling soŌware to track each animal’s medical and feeding history, enabling us to adjust care as needed.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Organic Fertilizer & Composting Section */}
+                    <div className="grid grid-cols-1 md:grid-cols-3  lg:gap-14 md:gap-6">
+                        <div className='col-span-1'>
+
+                            <div className=''>
+                                <Image src="/images/service-3.png" alt="Breed Development" height={500} width={500} className="w-full h-full " />
+                            </div>
+                        </div>
+                        <div className="col-span-2">
+                            <div className='md:mt-0 mt-5'>
+                                <p className='text-white flex justify-center items-center bg-[--green-text]  rounded-full title-family lg:text-xl font-semibold lg:w-[50px] lg:h-[50px]  w-[40px] h-[40px] mb-3'>03</p>
+                            </div>
+                            <h2 className="lg:text-[32px] md:text-[28px] text-2xl font-bold  title-family text-[--header-text] text-left">Organic Fertilizer &
+                                Composting</h2>
+                            <p className="font-medium mt-4 text-[--gray] md:text-normal text-sm">
+                                At KD Farms, sustainability is a way of life. We produce organic ferƟlizer and compost using vermiculture techniques, ensuring that our animals receive the best possible nutriƟon from the fodder we grow. Our compost is also available for sale to other farms, helping them achieve higher crop yields without the use of harmful chemicals. The result is a closed-loop system where nothing goes to waste, and every part of the farm contributes to the health of the ecosystem.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div className="container mx-auto py-10">
-                <p className="text-[40px] font-bold text-[--blue-text] text-center my-4">
-                    Our Services
-                </p>
-
-
-                {/* Breed Development Section */}
-                <div className="flex flex-col lg:flex-row items-center mb-10">
-                    <img src="/images/cattle-breed.webp" alt="Breed Development" className="w-[400px] max-h-[300px] lg:w-1/2 rounded-md shadow-lg" />
-                    <div className="lg:ml-8 mt-4 lg:mt-0">
-                        <h2 className="text-2xl font-bold text-[--blue]">Breed Development</h2>
-                        <p className="text-lg mt-4 text-[--gray]">
-                            KD Farms is at the forefront of breed development, specializing in both natural and artificial insemination techniques to improve the genetic quality of cattle. Our goal is to create cattle that produce more milk and are resilient to diseases.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Farm Management Section */}
-                <div className="flex flex-col lg:flex-row-reverse items-center mb-10">
-                    <img src="/images/farm.avif" alt="Farm Management" className="w-[400px] max-h-[300px] lg:w-1/2 rounded-md shadow-lg" />
-                    <div className="lg:mr-8 mt-4 lg:mt-0">
-                        <h2 className="text-2xl font-bold text-[--blue]">Farm Management</h2>
-                        <p className="text-lg mt-4 text-[--gray]">
-                            Our farm management system includes automatic milking parlours, software that tracks health and production data, and more. This leads to happier animals and better milk production.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Organic Fertilizer & Composting Section */}
-                <div className="flex flex-col lg:flex-row items-center mb-10">
-                    <img src="/images/compose.avif" alt="Breed Development" className="w-[400px] max-h-[300px] lg:w-1/2 rounded-md shadow-lg" />
-                    <div className="lg:ml-8 mt-4 lg:mt-0">
-                        <h2 className="text-2xl font-bold text-[--blue]">Breed Development</h2>
-                        <p className="text-lg mt-4 text-[--gray]">
-                            KD Farms is at the forefront of breed development, specializing in both natural and artificial insemination techniques to improve the genetic quality of cattle. Our goal is to create cattle that produce more milk and are resilient to diseases.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </>
+        </div>
     )
 }
 

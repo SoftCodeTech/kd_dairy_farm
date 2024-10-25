@@ -9,25 +9,25 @@ export const Routes = [
     },
     {
         name: "Services",
-        path: "/services",
-        // child: [
-        //     {
-        //         name: "Blog Grid",
-        //         path: "/",
-        //     },
-        //     {
-        //         name: "Blog Grid 1",
-        //         path: "/",
-        //     },
-        //     {
-        //         name: "Blog Grid 2",
-        //         path: "/",
-        //     },
-        // ]
+        path: "/services"
     },
     {
         name: "Product",
-        path: "/products"
+        path: "/products",
+        child: [
+            {
+                name: "Dairy Products",
+                path: "/products",
+            },
+            {
+                name: "Breed Development",
+                path: "/",
+            },
+            {
+                name: "Consultancy",
+                path: "/",
+            },
+        ]
     },
     {
         name: "Contact Us",
